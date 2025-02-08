@@ -1,0 +1,116 @@
+# Welcome to Beautiful Jekyll
+# This config file is meant for settings that affect your entire website.
+
+# --- Required options --- #
+
+# URL of your website (replace with your GitHub username)
+url: "https://leeloew.github.io"
+baseurl: ""  # Replace with your repository name, e.g., "/project-name"
+
+# Site title and author
+title: "Project Title"
+author: "Your Name"
+
+# --- Navigation bar links --- #
+
+navbar-links:
+  Navigation:
+    - Overview: "/overview/"
+    - Documentation: "/documentation/"
+    - Examples: "/examples/"
+    - Resources: "/resources/"
+
+# --- Logo --- #
+
+#avatar: "/assets/img/logo.png"
+#round-avatar: true
+
+# --- Footer social media links --- #
+
+social-network-links:
+  email: "your.email@example.com"
+  github: username
+  twitter: username
+  linkedin: username
+
+# --- General options --- #
+
+share-links-active:
+  twitter: true
+  facebook: false
+  linkedin: true
+  vk: false
+
+url-pretty: "Home"
+
+excerpt_length: 0
+feed_show_excerpt: false
+feed_show_tags: false
+post_search: true
+
+# --- Theme colors --- #
+
+# Dark theme color scheme
+navbar-col: "#1A1A1A"
+navbar-text-col: "#E0E0E0"
+navbar-border-col: "#333333"
+page-col: "#121212"
+text-col: "#E0E0E0"
+link-col: "#4DA8DA"
+hover-col: "#6FBEF2"
+footer-col: "#1A1A1A"
+footer-text-col: "#CCCCCC"
+footer-link-col: "#4DA8DA"
+header-text-col: "#FFFFFF"
+subtitle-text-col: "#CCCCCC"
+
+# --- Core Jekyll Settings --- #
+
+timezone: "America/Toronto"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+# --- Default layouts --- #
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false  # Changed to false by default
+      social-share: true
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+# --- Files to exclude --- #
+
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - screenshot.png
+  - docs/
+
+# --- Plugin Settings --- #
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-remote-theme
+
+# --- Theme Settings --- #
+
+remote_theme: daattali/beautiful-jekyll@5.0.0
